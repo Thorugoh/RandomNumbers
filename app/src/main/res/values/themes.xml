@@ -5,5 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.RandomNumbers" parent="Base.Theme.RandomNumbers" />
+    <style name="Theme.RandomNumbers" parent="Base.Theme.RandomNumbers" >
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>

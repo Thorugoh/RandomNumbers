@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.dev.thorugoh.randomnumbers"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.dev.thorugoh.randomnumbers"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

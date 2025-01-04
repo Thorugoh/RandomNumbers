@@ -29,7 +29,7 @@
     </style>
 
     <!-- Roboto Flex Paragraph Medium -->
-    <style name="TextAppearance.Sora.ParagraphMedium" parent="TextAppearance.MaterialComponents.Body1">
+    <style name="TextAppearance.RobotoFlex.ParagraphMedium" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/roboto_flex</item>
         <item name="android:textSize">14sp</item>
         <item name="android:lineSpacingExtra">3sp</item>

@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_content_nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content_nav_graph"
+    app:startDestination="@id/drawConfigFragment2">
 
+    <fragment
+        android:id="@+id/drawConfigFragment2"
+        android:name="com.dev.thorugoh.randomnumbers.DrawConfigFragment"
+        android:label="fragment_draw_config"
+        tools:layout="@layout/fragment_draw_config" >
+        <action
+            android:id="@+id/action_drawConfigFragment2_to_drawResultFragment2"
+            app:destination="@id/drawResultFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/drawResultFragment2"
+        android:name="com.dev.thorugoh.randomnumbers.DrawResultFragment"
+        android:label="fragment_draw_result"
+        tools:layout="@layout/fragment_draw_result" />
 </navigation>

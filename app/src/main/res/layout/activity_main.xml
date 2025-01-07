@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="36dp"
+                android:name="androidx.fragment.app.FragmentContainer"
                 app:layout_constraintBottom_toTopOf="@+id/btnDraw"
                 app:layout_constraintTop_toBottomOf="@+id/tvTitle"
                 app:layout_constraintVertical_bias="0.0"
@@ -77,6 +78,9 @@
                 android:drawableEnd="@drawable/ic_go"
                 android:paddingHorizontal="48dp"
                 android:text="@string/draw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcvContent"
                 app:layout_constraintBottom_toBottomOf="@+id/ivBackground" />
 
             <TextView
@@ -91,6 +95,8 @@
                 android:textColor="@color/content_brand"
                 app:drawableStartCompat="@drawable/ic_chat"
                 app:drawableTint="@color/content_brand"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnDraw" />
 
             <TextView
@@ -101,6 +107,8 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/how_does_drawing_numbers_work_answer"
                 android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvFirstInfo" />
 
             <TextView
@@ -115,6 +123,8 @@
                 android:textColor="@color/content_brand"
                 app:drawableStartCompat="@drawable/ic_chat"
                 app:drawableTint="@color/content_brand"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvFirstInfoContent" />
 
             <TextView
@@ -127,6 +137,8 @@
                 android:text="@string/choose_the_minimum_and_maximum_interval"
                 android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvSecondInfo" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

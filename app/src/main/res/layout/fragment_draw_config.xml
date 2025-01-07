@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/drawConfigFragment"
+    android:background="@color/background_primary"
+    tools:context=".DrawConfigFragment">
+
+    <TextView
+        android:id="@+id/tvInfoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/i_want_to_draw"
+        android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvInfoContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/want_to_draw_content"
+        android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoTitle" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="36dp"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoContent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/content_secondary"
+                android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
+                android:text="@string/numbers" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
+
+            <EditText
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:text="1"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/content_secondary"
+                android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
+                android:text="@string/from" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
+
+            <EditText
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:text="1"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/content_secondary"
+                android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
+                android:text="@string/to" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
+
+            <EditText
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:text="1"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/swtNotRepeatNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:thumbTint="@android:color/white"
+        app:trackTint="@color/content_tertiary"
+        app:trackDecorationTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_marginStart="16dp"
+        android:text="@string/do_not_repeat_numbers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/swtNotRepeatNumbers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/swtNotRepeatNumbers"
+        app:layout_constraintTop_toTopOf="@+id/swtNotRepeatNumbers" />
+</androidx.constraintlayout.widget.ConstraintLayout>

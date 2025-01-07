@@ -8,4 +8,15 @@
     <string name="how_does_drawing_numbers_work_answer">The drawer uses an algorithm of random generation to create numbers in a interval specified by the user.</string>
     <string name="choose_numbers_interval">Can I choose the numbers interval?</string>
     <string name="choose_the_minimum_and_maximum_interval">Yes, you can define the minimum and maximum values of the interval.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="i_want_to_draw">I want to draw:</string>
+    <string name="want_to_draw_content">Choose the interval and amount of numbers, press draw and check the results.</string>
+    <string name="numbers">NUMBERS</string>
+    <string name="of">of</string>
+    <string name="from">FROM</string>
+    <string name="to">TO</string>
+    <string name="do_not_repeat_numbers">Do not repeat numbers</string>
+    <string name="draw_result">DRAW RESULT</string>
+    <string name="first_result">1st RESULT</string>
 </resources>

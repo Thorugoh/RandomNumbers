@@ -18,5 +18,10 @@
     <string name="to">TO</string>
     <string name="do_not_repeat_numbers">Do not repeat numbers</string>
     <string name="draw_result">DRAW RESULT</string>
-    <string name="first_result">1st RESULT</string>
+    <string name="draw_number">%1$s RESULT</string>
+    <string name="_first_result">1st RESULT</string>
+    <string name="draw_again">Draw again</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_100">100</string>
 </resources>

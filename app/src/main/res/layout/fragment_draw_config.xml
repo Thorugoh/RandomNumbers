@@ -59,11 +59,12 @@
                 android:layout_height="8dp"/>
 
             <EditText
+                android:id="@+id/etAmountNumbers"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edittext"
-                android:text="1"
+                android:text="@string/_2"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
@@ -93,11 +94,12 @@
                 android:layout_height="8dp"/>
 
             <EditText
+                android:id="@+id/etInitialLimit"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edittext"
-                android:text="1"
+                android:text="@string/_1"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
@@ -127,11 +129,12 @@
                 android:layout_height="8dp"/>
 
             <EditText
+                android:id="@+id/etFinalLimit"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edittext"
-                android:text="1"
+                android:text="@string/_100"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"

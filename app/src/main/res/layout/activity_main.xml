@@ -61,7 +61,7 @@
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fcvContent"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="36dp"
                 app:navGraph="@navigation/main_content_nav_graph"
                 app:defaultNavHost="true"

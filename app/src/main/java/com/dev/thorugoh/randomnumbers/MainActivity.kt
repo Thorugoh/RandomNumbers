@@ -3,6 +3,7 @@ package com.dev.thorugoh.randomnumbers
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.ViewCompat
@@ -11,7 +12,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.dev.thorugoh.randomnumbers.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    private val viewModel: DrawViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
 
     private val navController by lazy {
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                             text = getString(R.string.draw_again)
                             setCompoundDrawablesWithIntrinsicBounds(null, null, AppCompatResources.getDrawable(this@MainActivity, R.drawable.ic_new_random), null)
                         }
+                        viewModel.drawNumbers()
                     }
                     getString(R.string.draw_again) -> {
                         navController?.popBackStack()

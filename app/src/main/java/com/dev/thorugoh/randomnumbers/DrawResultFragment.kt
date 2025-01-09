@@ -7,10 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import com.dev.thorugoh.randomnumbers.databinding.FragmentDrawResultBinding
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 class DrawResultFragment : Fragment() {
+    private val viewModel: DrawViewModel by activityViewModels()
+
     private var _binding: FragmentDrawResultBinding? = null
     private val binding get() = _binding!!
 
@@ -32,17 +37,25 @@ class DrawResultFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding) {
-            tvDrawNumber.text = getString(R.string.draw_number, "10th")
 
-            generateRandomNumbers()
-            generateRandomNumbers()
+
+            lifecycleScope.launch {
+                viewModel.uiState.collect { uiState ->
+                    tvDrawNumber.text = getString(R.string.draw_number, uiState.currentDrawNumber.toString())
+                    clearLastDrewNumbers()
+
+                    uiState.drawNumbers.forEach { drawNumber ->
+                        generateRandomNumbers(drawNumber)
+                    }
+                }
+            }
         }
     }
 
-    fun FragmentDrawResultBinding.generateRandomNumbers() {
+    private fun FragmentDrawResultBinding.generateRandomNumbers(drawNumber: Int) {
         val drawnNumberTextView = TextView(requireContext()).apply {
             id = View.generateViewId()
-            text = Random.nextInt(100).toString()
+            text = drawNumber.toString()
             setTextAppearance(R.style.TextAppearance_RobotoMono_Overline)
             textSize = 48f
             setTextColor(ContextCompat.getColor(requireContext(), R.color.content_brand))
@@ -51,6 +64,12 @@ class DrawResultFragment : Fragment() {
         root.addView(drawnNumberTextView)
         flowResultNumbersHelper.referencedIds =
             flowResultNumbersHelper.referencedIds.plus(drawnNumberTextView.id)
+    }
+
+    private fun FragmentDrawResultBinding.clearLastDrewNumbers(){
+        flowResultNumbersHelper.referencedIds.forEach {
+            root.removeView(root.findViewById(it))
+        }
     }
 
 }

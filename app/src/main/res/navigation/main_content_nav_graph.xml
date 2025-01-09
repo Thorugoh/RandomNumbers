@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_draw_config" >
         <action
             android:id="@+id/action_drawConfigFragment2_to_drawResultFragment2"
-            app:destination="@id/drawResultFragment2" />
+            app:destination="@id/drawResultFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
